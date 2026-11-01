@@ -221,3 +221,4 @@ __marimo__/
 
 # Downloaded market data
 data/*.csv
+.DS_Store
