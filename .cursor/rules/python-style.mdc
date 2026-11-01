@@ -1,0 +1,29 @@
+---
+description: Python coding style and conventions
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Python style
+
+- Follow PEP 8: 4-space indent, `snake_case` functions/variables, `PascalCase` classes.
+- Type-annotate public functions and non-obvious locals. Prefer `list[str]` over `List[str]`.
+- Use f-strings, not `%` or `.format()`, unless the format is reused.
+- Prefer the standard library. Add a dependency only when it clearly earns its keep.
+- Keep functions small and named for what they do. No one-letter names except loop indices.
+- Raise specific exceptions; do not swallow errors with bare `except:` or empty `except Exception`.
+
+```python
+# ❌ BAD
+def pred(d, t):
+    try:
+        return d[-1] * 1.01
+    except:
+        return None
+
+# ✅ GOOD
+def predict_next_close(closes: list[float]) -> float:
+    if not closes:
+        raise ValueError("closes must be non-empty")
+    return closes[-1] * 1.01
+```

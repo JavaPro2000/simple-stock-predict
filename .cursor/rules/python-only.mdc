@@ -1,0 +1,12 @@
+---
+description: This project is Python-only. Do not introduce other languages.
+alwaysApply: true
+---
+
+# Python only
+
+- Use Python for all application, script, and tooling code.
+- Do not add other languages (JavaScript/TypeScript, Go, Java, etc.) or their package ecosystems unless the user explicitly asks.
+- Prefer the standard library; add third-party Python packages only when needed.
+- Use `.py` modules. Add `requirements.txt` or `pyproject.toml` when dependencies appear.
+- Config and docs are fine (`.gitignore`, `README.md`, YAML/TOML, etc.).
